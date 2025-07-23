@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulir Tugas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+      color: #0A1F44;
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 2rem;
+      background: #f8f8f8;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      text-align: center;
+      color: #0A1F44;
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    input, select, textarea {
+      padding: 0.9rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    button {
+      background: #0A1F44;
+      color: white;
+      font-weight: bold;
+      padding: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .success-message {
+      display: none;
+      background: #dff0d8;
+      color: #3c763d;
+      text-align: center;
+      padding: 1rem;
+      border-radius: 6px;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Formulir Pengiriman Tugas</h2>
+  <form action="https://formsubmit.co/rickpipor@gmail.com" method="POST" enctype="multipart/form-data" onsubmit="showSuccess()">
+    
+    <label for="tugas">Upload File Tugas (boleh lebih dari satu)</label>
+    <input type="file" name="Tugas[]" id="tugas" multiple required>
+
+
+    <label for="bukti">Upload Bukti Pembayaran</label>
+    <input type="file" name="Bukti Pembayaran" id="bukti" required>
+
+    <label for="nama">Nama Tugas / Pelajaran</label>
+    <input type="text" name="Nama Tugas" id="nama" required>
+
+    <label for="jurusan">Jurusan (Opsional)</label>
+    <select name="Jurusan" id="jurusan">
+      <option value="">-- Pilih Jurusan --</option>
+      <option>IPA</option>
+      <option>IPS</option>
+      <option>Teknik</option>
+    </select>
+
+    <label for="whatsapp">Nomor WhatsApp (Hasil akan dikirim ke sini)</label>
+    <input type="text" name="Nomor WhatsApp" id="whatsapp" required>
+
+    <label for="catatan">Catatan untuk Admin</label>
+    <textarea name="Catatan" id="catatan" placeholder="Misalnya: tolong kerjakan dengan gaya bahasa santai..."></textarea>
+
+    <!-- FormSubmit config -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="box">
+    <input type="hidden" name="_next" value="formulir.html">
+
+    <button type="submit">Kirim Tugas</button>
+  </form>
+
+  <div class="success-message" id="successMsg">
+    ✅ Tugas berhasil dikirim! Ditunggu ya, admin akan segera menghubungi kamu lewat WhatsApp 📲
+  </div>
+</div>
+
+<script>
+  function showSuccess() {
+    setTimeout(() => {
+      document.getElementById("successMsg").style.display = "block";
+    }, 800); // Delay agar muncul setelah submit
+  }
+</script>
+
+</body>
+</html>

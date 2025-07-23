@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pembayaran Tugas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      color: #0A1F44;
+      padding: 2rem;
+      margin: 0;
+    }
+
+    h2, h3 {
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .payment-image {
+      width: 200px;
+      display: block;
+      margin: 1.5rem auto;
+    }
+
+    .accordion {
+      background-color: #FFD700;
+      color: #0A1F44;
+      cursor: pointer;
+      padding: 1rem;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-weight: bold;
+      border-radius: 6px;
+      margin: 0.5rem 0;
+    }
+
+    .panel {
+      padding: 1rem;
+      display: none;
+      background-color: #f9f9f9;
+      border-left: 4px solid #FFD700;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+
+    .panel img {
+      width: 180px;
+      margin-top: 0.5rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .payment-text {
+      font-size: 1rem;
+      color: #0A1F44;
+      text-align: center;
+    }
+
+    .cta-btn {
+      background: #14c404;
+      color: #0A1F44;
+      padding: 1rem 2rem;
+      border: none;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      display: block;
+      margin: 2rem auto 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Langkah 1 - Pembayaran</h2>
+  <p style="text-align:center;">Silakan pilih salah satu metode pembayaran di bawah ini.</p>
+
+  <h3 style="margin-top:2rem;">Scan QR DANA untuk bayar Rp10.000</h3>
+  <img src="images/qr.png" alt="QR DANA / QRIS" class="payment-image" />
+
+  <h3>Metode Pembayaran Alternatif</h3>
+
+  <button class="accordion">🔄 GoPay</button>
+  <div class="panel">
+    <div class="payment-text">
+      Scan QR GoPay untuk bayar Rp10.000:
+      <img src="images/gopay.png" alt="QR GoPay">
+    </div>
+  </div>
+
+  <button class="accordion">📲 ShopeePay</button>
+  <div class="panel">
+    <div class="payment-text">
+      Transfer ke nomor ShopeePay:<br><strong>0858-5661-8965</strong><br>
+      Upload bukti di formulir setelah transfer.
+    </div>
+  </div>
+
+  <button class="accordion">🏦 SeaBank</button>
+  <div class="panel">
+    <div class="payment-text">
+      Transfer ke rekening SeaBank:<br><strong>901134230086</strong><br>
+      Nominal tetap Rp10.000.
+    </div>
+  </div>
+
+  <a href="formulir.html"><button class="cta-btn">Lanjut ke Formulir</button></a>
+</div>
+
+<script>
+  const acc = document.getElementsByClassName("accordion");
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      panel.style.display = panel.style.display === "block" ? "none" : "block";
+    });
+  }
+</script>
+
+</body>
+</html>
