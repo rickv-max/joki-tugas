@@ -3,16 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Formulir Pengiriman Tugas</title>
+  <title>Formulir Kirim Tugas</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    emailjs.init("638R_Lni3CrC4mt6J"); // Public Key milikmu
-  </script>
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background-color: #fff;
+      background: #fff;
       color: #0A1F44;
       margin: 0;
       padding: 2rem;
@@ -67,16 +63,6 @@
       font-size: 1rem;
     }
 
-    .success-message {
-      display: none;
-      background: #dff0d8;
-      color: #3c763d;
-      text-align: center;
-      padding: 1rem;
-      border-radius: 6px;
-      margin-top: 1rem;
-    }
-
     @media (max-width: 600px) {
       body { padding: 1rem; }
       .container { padding: 1.5rem; box-shadow: none; }
@@ -89,11 +75,11 @@
   <div class="container">
     <h2>Formulir Pengiriman Tugas</h2>
 
-    <form id="formTugas" method="POST" enctype="multipart/form-data">
+    <form id="formTugas">
       <label for="nama">Nama Pelajaran / Tugas</label>
       <input type="text" name="nama" id="nama" required />
 
-      <label for="jurusan">Jurusan (Opsional)</label>
+      <label for="jurusan">Jurusan</label>
       <select name="jurusan" id="jurusan">
         <option value="">-- Pilih --</option>
         <option>IPA</option>
@@ -102,45 +88,26 @@
         <option>Akuntansi</option>
       </select>
 
-      <label for="whatsapp">Nomor WhatsApp</label>
-      <input type="text" name="whatsapp" id="whatsapp" required />
-
       <label for="catatan">Catatan untuk Admin</label>
-      <textarea name="catatan" id="catatan" placeholder="Contoh: Kerjakan dengan gaya santai ya kak..."></textarea>
+      <textarea name="catatan" id="catatan" placeholder="Contoh: Tugas diketik saja ya kak..."></textarea>
 
-      <label for="lampiran">Lampiran Tugas (Max 5MB)</label>
-      <input type="file" name="lampiran" id="lampiran" />
-
-      <button type="submit">Kirim Tugas</button>
+      <button type="submit">Kirim Tugas via WhatsApp</button>
     </form>
-
-    <div class="success-message" id="successMsg">
-      ✅ Tugas berhasil dikirim! Ditunggu ya, admin akan segera menghubungi kamu lewat WhatsApp 📲
-    </div>
   </div>
 
   <script>
-    // Validasi ukuran file upload
-    document.getElementById("lampiran").addEventListener("change", function() {
-      const file = this.files[0];
-      if (file && file.size > 5 * 1024 * 1024) {
-        alert("❌ File terlalu besar. Maksimum 5MB!");
-        this.value = "";
-      }
-    });
-
-    // Kirim data via EmailJS
     document.getElementById("formTugas").addEventListener("submit", function(e) {
       e.preventDefault();
-      emailjs.sendForm("service_dae4pmi", "template_5v4m6ef", this)
-        .then(() => {
-          document.getElementById("successMsg").style.display = "block";
-          this.reset();
-        })
-        .catch((error) => {
-          console.error("EmailJS Error:", error);
-          alert("❌ Gagal mengirim: " + (error.text || "Silakan cek koneksi atau ukuran file."));
-        });
+
+      const nama = document.getElementById("nama").value;
+      const jurusan = document.getElementById("jurusan").value || "-";
+      const catatan = document.getElementById("catatan").value || "-";
+
+      const pesan = encodeURIComponent(
+        `Halo kak, saya ingin kirim tugas:\n\n📝 Nama Pelajaran: ${nama}\n🏫 Jurusan: ${jurusan}\n🗒️ Catatan: ${catatan}\n\nFile tugas dan bukti transfer akan saya kirim lewat chat ini 🙏`
+      );
+
+      window.location.href = `https://wa.me/6285856618965?text=${pesan}`;
     });
   </script>
 </body>
