@@ -73,68 +73,83 @@
       border-radius: 6px;
       margin-top: 1rem;
     }
-
     @media (max-width: 600px) {
-      body {
-        padding: 1rem;
-      }
+  body {
+    padding: 1rem;
+  }
 
-      .container {
-        padding: 1.5rem;
-        box-shadow: none;
-      }
+  .container {
+    padding: 1.5rem;
+    box-shadow: none;
+  }
 
-      h2 {
-        font-size: 1.4rem;
-      }
+  h2 {
+    font-size: 1.4rem;
+  }
 
-      input, select, textarea {
-        font-size: 0.95rem;
-        padding: 0.8rem;
-      }
+  input, select, textarea {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
 
-      button {
-        font-size: 0.95rem;
-        padding: 0.8rem;
-      }
-    }
+  button {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+}
+
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <h2>Formulir Pengiriman Tugas</h2>
+<div class="container">
+  <h2>Formulir Pengiriman Tugas</h2>
+  <form action="https://formsubmit.co/rickpipor@gmail.com" method="POST" enctype="multipart/form-data" onsubmit="showSuccess()">
+    
+    <label for="tugas">Upload File Tugas (boleh lebih dari satu)</label>
+    <input type="file" name="Tugas[]" id="tugas" multiple required>
 
-    <form action="https://formspree.io/f/mgvzaddb" method="POST" enctype="multipart/form-data">
-      <label for="tugas">Upload File Tugas</label>
-      <input type="file" name="tugas" id="tugas" multiple required>
 
-      <label for="bukti">Upload Bukti Pembayaran</label>
-      <input type="file" name="bukti" id="bukti" required>
+    <label for="bukti">Upload Bukti Pembayaran</label>
+    <input type="file" name="Bukti Pembayaran" id="bukti" required>
 
-      <label for="nama">Nama Pelajaran / Tugas</label>
-      <input type="text" name="nama" id="nama" required>
+    <label for="nama">Nama Tugas / Pelajaran</label>
+    <input type="text" name="Nama Tugas" id="nama" required>
 
-      <label for="jurusan">Jurusan (Opsional)</label>
-      <select name="jurusan" id="jurusan">
-        <option value="">-- Pilih --</option>
-        <option>IPA</option>
-        <option>IPS</option>
-        <option>Teknik</option>
-        <option>Akuntansi</option>
-      </select>
+    <label for="jurusan">Jurusan (Opsional)</label>
+    <select name="Jurusan" id="jurusan">
+      <option value="">-- Pilih Jurusan --</option>
+      <option>IPA</option>
+      <option>IPS</option>
+      <option>Teknik</option>
+    </select>
 
-      <label for="whatsapp">Nomor WhatsApp</label>
-      <input type="text" name="whatsapp" id="whatsapp" required>
+    <label for="whatsapp">Nomor WhatsApp (Hasil akan dikirim ke sini)</label>
+    <input type="text" name="Nomor WhatsApp" id="whatsapp" required>
 
-      <label for="catatan">Catatan untuk Admin</label>
-      <textarea name="catatan" id="catatan" placeholder="Contoh: Kerjakan dengan gaya bahasa santai ya kak..."></textarea>
+    <label for="catatan">Catatan untuk Admin</label>
+    <textarea name="Catatan" id="catatan" placeholder="Misalnya: tolong kerjakan dengan gaya bahasa santai..."></textarea>
 
-      <input type="hidden" name="_redirect" value="sukses.html">
+    <!-- FormSubmit config -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="box">
+    <input type="hidden" name="_next" value="formulir.html">
 
-      <button type="submit">Kirim Tugas</button>
-    </form>
+    <button type="submit">Kirim Tugas</button>
+  </form>
+
+  <div class="success-message" id="successMsg">
+    ✅ Tugas berhasil dikirim! Ditunggu ya, admin akan segera menghubungi kamu lewat WhatsApp 📲
   </div>
+</div>
+
+<script>
+  function showSuccess() {
+    setTimeout(() => {
+      document.getElementById("successMsg").style.display = "block";
+    }, 800); // Delay agar muncul setelah submit
+  }
+</script>
 
 </body>
 </html>
