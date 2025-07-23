@@ -89,7 +89,7 @@
   <div class="container">
     <h2>Formulir Pengiriman Tugas</h2>
 
-    <form id="formTugas">
+    <form id="formTugas" method="POST" enctype="multipart/form-data">
       <label for="nama">Nama Pelajaran / Tugas</label>
       <input type="text" name="nama" id="nama" required />
 
@@ -130,6 +130,7 @@
           alert("❌ Gagal mengirim: " + error);
         });
     });
+    console.error("EmailJS Error detail:", error);
   </script>
 </body>
 </html>
