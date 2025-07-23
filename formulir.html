@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
-    emailjs.init("638R_Lni3CrC4mt6J"); // Ganti dengan publicKey milikmu
+    emailjs.init("638R_Lni3CrC4mt6J"); // Public Key milikmu
   </script>
   <style>
     body {
@@ -108,7 +108,7 @@
       <label for="catatan">Catatan untuk Admin</label>
       <textarea name="catatan" id="catatan" placeholder="Contoh: Kerjakan dengan gaya santai ya kak..."></textarea>
 
-      <label for="lampiran">Lampiran (jika diaktifkan di EmailJS)</label>
+      <label for="lampiran">Lampiran Tugas (Max 5MB)</label>
       <input type="file" name="lampiran" id="lampiran" />
 
       <button type="submit">Kirim Tugas</button>
@@ -120,17 +120,28 @@
   </div>
 
   <script>
+    // Validasi ukuran file upload
+    document.getElementById("lampiran").addEventListener("change", function() {
+      const file = this.files[0];
+      if (file && file.size > 5 * 1024 * 1024) {
+        alert("❌ File terlalu besar. Maksimum 5MB!");
+        this.value = "";
+      }
+    });
+
+    // Kirim data via EmailJS
     document.getElementById("formTugas").addEventListener("submit", function(e) {
       e.preventDefault();
       emailjs.sendForm("service_dae4pmi", "template_5v4m6ef", this)
         .then(() => {
           document.getElementById("successMsg").style.display = "block";
           this.reset();
-        }, (error) => {
-          alert("❌ Gagal mengirim: " + error);
+        })
+        .catch((error) => {
+          console.error("EmailJS Error:", error);
+          alert("❌ Gagal mengirim: " + (error.text || "Silakan cek koneksi atau ukuran file."));
         });
     });
-    console.error("EmailJS Error detail:", error);
   </script>
 </body>
 </html>
