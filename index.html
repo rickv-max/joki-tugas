@@ -45,38 +45,33 @@
     }
 
     header {
-      background: var(--biru);
-      padding: 1.2rem 1rem;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Sesuaikan dengan kebutuhan */
-  background-color: #1e1e1e; /* contoh latar belakang */
+  background: var(--biru);
+  padding: 1.2rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-header h1 {
-  font-size: 2rem;
+#type-text {
+  margin: 0 auto;
+  font-size: 1.8rem;
   color: white;
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid white;
-  width: 0;
-  animation: typewriter 3s steps(20, end) forwards, blink 0.75s step-end infinite;
+  display: inline-block;
+  animation: typewriter 2.8s steps(22) 0.3s 1 normal both, blink 0.75s step-end infinite;
 }
 
-/* Animasi mengetik */
+/* Efek ketik */
 @keyframes typewriter {
-  from { width: 0; }
-  to { width: 16ch; } /* 16 karakter: "JokiTugasCepat⚡️" */
+  from { width: 0 }
+  to { width: 18ch } /* jumlah karakter + emoji disesuaikan */
 }
 
-/* Animasi cursor kedip */
+/* Efek blinking */
 @keyframes blink {
   50% { border-color: transparent; }
 }
@@ -198,7 +193,7 @@ header h1 {
 <body>
 
 <header>
-  <h1 id="type-text" class="typewriter blink-caret"></h1>
+  <h1 id="type-text">JokiTugasCepat⚡️</h1>
 </header>
 
 <div class="hero" data-aos="fade-up">
@@ -321,14 +316,14 @@ header h1 {
     offset: 120,
     once: false
   });
-  document.addEventListener('DOMContentLoaded', () => {
-  const textElement = document.getElementById('type-text');
-  
-  // Setelah animasi selesai: hapus border caret
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const text = document.getElementById('type-text');
   setTimeout(() => {
-    textElement.style.borderRight = 'none';
-  }, 3500); // 3s animasi + sedikit buffer
+    text.style.borderRight = 'none'; // hilangkan garis ketik
+  }, 3300); // durasi total animasi + delay
 });
+</script>
 </script>
 
 </body>
