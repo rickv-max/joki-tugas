@@ -52,35 +52,33 @@
       z-index: 999;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-       header h1 {
-  /* Tambahan/ubah agar teks center & animasi ketik */
-  margin: 0 auto;
-  font-size: 1.8rem;
-  text-align: center;
-  color: #fff;
+    header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Sesuaikan dengan kebutuhan */
+  background-color: #1e1e1e; /* contoh latar belakang */
+}
+
+header h1 {
+  font-size: 2rem;
+  color: white;
   white-space: nowrap;
   overflow: hidden;
-  width: fit-content;
+  border-right: 2px solid white;
+  width: 0;
+  animation: typewriter 3s steps(20, end) forwards, blink 0.75s step-end infinite;
 }
 
-/* Typewriter effect */
+/* Animasi mengetik */
 @keyframes typewriter {
-  from { width: 0 }
-  to { width: 100% }
+  from { width: 0; }
+  to { width: 16ch; } /* 16 karakter: "JokiTugasCepat⚡️" */
 }
 
+/* Animasi cursor kedip */
 @keyframes blink {
   50% { border-color: transparent; }
-}
-
-.typewriter {
-  display: inline-block;
-  border-right: 2px solid white;
-  animation: typewriter 3s steps(20, end) 1s 1 normal both;
-}
-
-.blink-caret {
-  animation: blink 0.75s step-end infinite;
 }
 
     .hero {
@@ -325,16 +323,12 @@
   });
   document.addEventListener('DOMContentLoaded', () => {
   const textElement = document.getElementById('type-text');
-  const fullText = "JokiTugasCepat⚡️";
-  textElement.textContent = fullText;
-
-  // Hapus caret setelah animasi selesai
+  
+  // Setelah animasi selesai: hapus border caret
   setTimeout(() => {
-    textElement.classList.remove('blink-caret');
     textElement.style.borderRight = 'none';
-  }, 4000); // 3s animasi + 1s delay
+  }, 3500); // 3s animasi + sedikit buffer
 });
-
 </script>
 
 </body>
