@@ -12,6 +12,7 @@
       --bg: #f3f6fb;
       --white: #fff;
       --gray: #d1d9e6;
+      --info: #e6f4ea;
     }
 
     body {
@@ -85,6 +86,16 @@
       min-height: 100px;
     }
 
+    .info-box {
+      background-color: var(--info);
+      padding: 1rem;
+      border-left: 4px solid var(--accent);
+      border-radius: 10px;
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+      color: #2e5e42;
+    }
+
     button {
       width: 100%;
       padding: 1rem;
@@ -123,6 +134,10 @@
   <div class="card">
     <h2>📥 Kirim Tugas Sekarang</h2>
     <div class="subtitle">Isi detail tugas kamu dan kirim langsung ke WhatsApp Admin</div>
+
+    <div class="info-box">
+      📎 <strong>Setelah isi form</strong>, silakan kirim <b>file tugas & bukti pembayaran</b> melalui WhatsApp pada chat yang terbuka setelah ini.
+    </div>
 
     <form id="formTugas">
       <label for="nama">Nama Pelajaran / Tugas</label>
