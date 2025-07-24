@@ -16,6 +16,8 @@
   <link rel="canonical" href="https://jokitugascepat.online/" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <!-- Tambahan AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <style>
     :root {
       --biru: #0A1F44;
@@ -169,7 +171,7 @@
   <h1>⚡ JokiTugasCepat</h1>
 </header>
 
-<div class="hero">
+<div class="hero" data-aos="fade-up">
   <h2>Selesaikan Tugas Tanpa Ribet</h2>
   <p>
     Banyak tugas sekolah menumpuk? Tenang, kami bantu! <br>
@@ -182,7 +184,7 @@
   <a href="pembayaran.html"><button class="cta-btn">Joki Sekarang</button></a>
 </div>
 
-<div class="highlight-box">
+<div class="highlight-box" data-aos="fade-up">
   <h2>Kenapa Memilih Layanan Kami?</h2>
   <ul style="list-style:none; padding:0; margin:0; font-size:1rem; line-height:1.8; color:#0A1F44;">
     <li>✅ Proses cepat tanpa ribet</li>
@@ -192,25 +194,25 @@
   </ul>
 </div>
 
-<section style="max-width:1100px; margin:4rem auto; padding:2rem 1rem;">
+<section style="max-width:1100px; margin:4rem auto; padding:2rem 1rem;" data-aos="fade-up">
   <h2 style="text-align:center; font-size:2rem; color:#0A1F44; margin-bottom:2rem;">Apa Sih Istimewanya Layanan Kami?</h2>
   <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:2rem;">
 
-    <div style="flex:1; min-width:280px; max-width:340px; background:#fff; padding:2rem; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.08); text-align:center;">
+    <div style="flex:1; min-width:280px; max-width:340px; background:#fff; padding:2rem; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.08); text-align:center;" data-aos="fade-up">
       <h3 style="color:#0A1F44; font-size:1.3rem; margin-bottom:1rem;">Layanan Tugas Semua Mata Pelajaran</h3>
       <p style="font-size:0.95rem; line-height:1.6; color:#333;">
         Dari Matematika, Bahasa, Sejarah hingga TIK – kami siap bantu kamu kerjakan semua!
       </p>
     </div>
 
-    <div style="flex:1; min-width:280px; max-width:340px; background:#fff; padding:2rem; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.08); text-align:center;">
+    <div style="flex:1; min-width:280px; max-width:340px; background:#fff; padding:2rem; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.08); text-align:center;" data-aos="fade-up">
       <h3 style="color:#0A1F44; font-size:1.3rem; margin-bottom:1rem;">Tanpa Ribet, Langsung Dikirim</h3>
       <p style="font-size:0.95rem; line-height:1.6; color:#333;">
         Tanpa login. Cukup bayar & isi form. Kami kerjakan dan kirim langsung ke WhatsApp kamu!
       </p>
     </div>
 
-    <div style="flex:1; min-width:280px; max-width:340px; background:#fff; padding:2rem; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.08); text-align:center;">
+    <div style="flex:1; min-width:280px; max-width:340px; background:#fff; padding:2rem; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.08); text-align:center;" data-aos="fade-up">
       <h3 style="color:#0A1F44; font-size:1.3rem; margin-bottom:1rem;">Harga Tetap & Transparan</h3>
       <p style="font-size:0.95rem; line-height:1.6; color:#333;">
         Biaya tetap Rp10.000 per tugas. Tanpa biaya tersembunyi. Hemat dan jelas!
@@ -219,7 +221,7 @@
   </div>
 </section>
 
-<section style="max-width:900px; margin:4rem auto; padding:2rem 1rem;">
+<section style="max-width:900px; margin:4rem auto; padding:2rem 1rem;" data-aos="fade-up">
   <h2 style="text-align:center; font-size:2rem; color:#0A1F44; margin-bottom:2rem;">Pertanyaan yang Sering Ditanyakan (FAQ)</h2>
 
   <div class="faq-box">
@@ -281,6 +283,16 @@
     © 2025 ⚡ JokiTugasCepat. Semua hak dilindungi.
   </div>
 </footer>
+
+<!-- AOS script -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    offset: 120,
+    once: true
+  });
+</script>
 
 </body>
 </html>
