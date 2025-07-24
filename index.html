@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Joki Tugas Sekolah</title>
+  <title>⚡ JokiTugasCepat | Joki Tugas Sekolah & SMK</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
       --biru: #0A1F44;
       --emas: #FFD700;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
     }
 
     body {
@@ -18,16 +22,31 @@
       color: var(--biru);
     }
 
+    header {
+      background: var(--biru);
+      color: white;
+      padding: 1.2rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
     .hero {
       background: linear-gradient(to right, #0A1F44, #132A63);
       color: white;
       padding: 3rem 1rem;
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
-    .hero h1 {
-      font-size: 2.5rem;
+    .hero h2 {
+      font-size: 2rem;
       margin-bottom: 1rem;
     }
 
@@ -37,6 +56,10 @@
       font-size: 1.1rem;
       line-height: 1.8;
       opacity: 0.95;
+    }
+
+    .hero p strong {
+      color: var(--emas);
     }
 
     .cta-btn {
@@ -77,93 +100,26 @@
       line-height: 1.7;
       color: #333;
     }
-    .hero p strong {
-     color: #FFD700;
-}
-
-    .hero span {
-     font-weight: bold;
-}
 
     @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 2rem;
+      header h1 {
+        font-size: 1.4rem;
+      }
+
+      .hero h2 {
+        font-size: 1.6rem;
       }
 
       .cta-btn {
         padding: 0.8rem 2rem;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
       }
 
       .highlight-box {
         margin: 2rem 1rem;
       }
     }
-  </style>
-</head>
-<body>
 
-<div class="hero">
-  <h1>Joki Tugas Sekolah</h1>
-<p>
-  Banyak tugas sekolah menumpuk? Tenang, kami bantu! <br>
-  <strong>Joki Tugas Sekolah</strong> siap kerjakan tugas SMP, SMA, SMK hanya 
-  <span style="background:#FFD700; color:#0A1F44; padding:0.2rem 0.4rem; border-radius:4px;">
-    Rp10.000 per tugas
-  </span>.<br>
-  Upload tugas, duduk santai, dan hasilnya langsung kami kirim ke <strong>WhatsApp kamu</strong>.
-</p>
-  <a href="pembayaran.html"><button class="cta-btn">Joki Sekarang</button></a>
-</div>
-
-<div class="highlight-box" style="max-width:680px; margin:3rem auto; background:#ffffff; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.08); padding:2rem 1.5rem;">
-  <h2 style="text-align:center; font-size:1.8rem; margin-bottom:1.2rem; color:#0A1F44;">Kenapa Memilih Layanan Kami?</h2>
-
-  <ul style="list-style:none; padding:0; margin:0; font-size:1rem; line-height:1.8; color:#0A1F44;">
-    <li style="margin-bottom:0.6rem;">✅ Proses cepat tanpa ribet</li>
-    <li style="margin-bottom:0.6rem;">✅ Hasil dikirim langsung ke WhatsApp kamu</li>
-    <li style="margin-bottom:0.6rem;">✅ Privasi dan keamanan terjaga</li>
-    <li style="margin-bottom:0.6rem;">✅ Cocok untuk pelajar yang butuh bantuan saat padat tugas</li>
-  </ul>
-
-  <p style="margin-top:1.5rem; font-size:1rem; color:#333; text-align:center;">
-    🚀 Jangan buang waktu. Kami siap bantu kamu menyelesaikan tugas dengan cepat dan rapi, biar kamu bisa tetap fokus pada hal-hal penting lainnya!
-  </p>
-</div>
-<section style="max-width:1100px; margin:4rem auto; padding:2rem 1rem;">
-  <h2 style="text-align:center; font-size:2rem; color:#0A1F44; margin-bottom:2rem;">Apa Sih Istimewanya Layanan Kami?</h2>
-
-  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:2rem;">
-
-    <!-- Box 1 -->
-    <div style="flex:1; min-width:280px; max-width:340px; background:#fff; padding:2rem; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.08); text-align:center;">
-      <h3 style="color:#0A1F44; font-size:1.3rem; margin-bottom:1rem;">Layanan Tugas Semua Mata Pelajaran</h3>
-      <p style="font-size:0.95rem; line-height:1.6; color:#333;">
-        Kami menerima tugas dari berbagai pelajaran seperti Matematika, Bahasa Indonesia, Fisika, Sejarah, dan lainnya. Kamu tinggal upload—kami yang kerjakan.
-      </p>
-    </div>
-
-    <!-- Box 2 -->
-    <div style="flex:1; min-width:280px; max-width:340px; background:#fff; padding:2rem; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.08); text-align:center;">
-      <h3 style="color:#0A1F44; font-size:1.3rem; margin-bottom:1rem;">Tanpa Ribet, Langsung Dikirim</h3>
-      <p style="font-size:0.95rem; line-height:1.6; color:#333;">
-        Tidak perlu daftar atau login. Cukup bayar, isi formulir, dan tugasmu langsung diproses. Hasil akan kami kirim ke WhatsApp kamu tanpa delay.
-      </p>
-    </div>
-
-    <!-- Box 3 -->
-    <div style="flex:1; min-width:280px; max-width:340px; background:#fff; padding:2rem; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.08); text-align:center;">
-      <h3 style="color:#0A1F44; font-size:1.3rem; margin-bottom:1rem;">Harga Tetap & Transparan</h3>
-      <p style="font-size:0.95rem; line-height:1.6; color:#333;">
-        Biaya mulai dari Rp10.000/tugas tanpa tambahan biaya tersembunyi. Semua proses jelas, praktis, dan terjangkau untuk pelajar Indonesia.
-      </p>
-    </div>
-  </div>
-</section>
-<section style="max-width:900px; margin:4rem auto; padding:2rem 1rem;">
-  <h2 style="text-align:center; font-size:2rem; color:#0A1F44; margin-bottom:2rem;">Pertanyaan yang Sering Ditanyakan (FAQ)</h2>
-
-  <style>
     .faq-box {
       background: #f9f9f9;
       border-radius: 8px;
@@ -187,61 +143,112 @@
       color: #333;
       border-top: 1px solid #eaeaea;
     }
+
+    footer {
+      background:#0A1F44;
+      color:white;
+      padding:2rem 1rem;
+      margin-top:3rem;
+    }
   </style>
+</head>
+<body>
+
+<header>
+  <h1>⚡ JokiTugasCepat</h1>
+</header>
+
+<div class="hero">
+  <h2>Selesaikan Tugas Tanpa Ribet</h2>
+  <p>
+    Banyak tugas sekolah menumpuk? Tenang, kami bantu! <br>
+    <strong>JokiTugasCepat</strong> siap kerjakan tugas SMP, SMA, SMK hanya 
+    <span style="background:#FFD700; color:#0A1F44; padding:0.2rem 0.4rem; border-radius:4px;">
+      Rp10.000 per tugas
+    </span>.<br>
+    Upload tugas, duduk santai, dan hasilnya langsung kami kirim ke <strong>WhatsApp kamu</strong>.
+  </p>
+  <a href="pembayaran.html"><button class="cta-btn">Joki Sekarang</button></a>
+</div>
+
+<div class="highlight-box">
+  <h2>Kenapa Memilih Layanan Kami?</h2>
+  <ul style="list-style:none; padding:0; margin:0; font-size:1rem; line-height:1.8; color:#0A1F44;">
+    <li>✅ Proses cepat tanpa ribet</li>
+    <li>✅ Hasil dikirim langsung ke WhatsApp kamu</li>
+    <li>✅ Privasi dan keamanan terjaga</li>
+    <li>✅ Cocok untuk pelajar yang butuh bantuan saat padat tugas</li>
+  </ul>
+</div>
+
+<section style="max-width:1100px; margin:4rem auto; padding:2rem 1rem;">
+  <h2 style="text-align:center; font-size:2rem; color:#0A1F44; margin-bottom:2rem;">Apa Sih Istimewanya Layanan Kami?</h2>
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:2rem;">
+
+    <div style="flex:1; min-width:280px; max-width:340px; background:#fff; padding:2rem; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.08); text-align:center;">
+      <h3 style="color:#0A1F44; font-size:1.3rem; margin-bottom:1rem;">Layanan Tugas Semua Mata Pelajaran</h3>
+      <p style="font-size:0.95rem; line-height:1.6; color:#333;">
+        Dari Matematika, Bahasa, Sejarah hingga TIK – kami siap bantu kamu kerjakan semua!
+      </p>
+    </div>
+
+    <div style="flex:1; min-width:280px; max-width:340px; background:#fff; padding:2rem; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.08); text-align:center;">
+      <h3 style="color:#0A1F44; font-size:1.3rem; margin-bottom:1rem;">Tanpa Ribet, Langsung Dikirim</h3>
+      <p style="font-size:0.95rem; line-height:1.6; color:#333;">
+        Tanpa login. Cukup bayar & isi form. Kami kerjakan dan kirim langsung ke WhatsApp kamu!
+      </p>
+    </div>
+
+    <div style="flex:1; min-width:280px; max-width:340px; background:#fff; padding:2rem; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.08); text-align:center;">
+      <h3 style="color:#0A1F44; font-size:1.3rem; margin-bottom:1rem;">Harga Tetap & Transparan</h3>
+      <p style="font-size:0.95rem; line-height:1.6; color:#333;">
+        Biaya tetap Rp10.000 per tugas. Tanpa biaya tersembunyi. Hemat dan jelas!
+      </p>
+    </div>
+  </div>
+</section>
+
+<section style="max-width:900px; margin:4rem auto; padding:2rem 1rem;">
+  <h2 style="text-align:center; font-size:2rem; color:#0A1F44; margin-bottom:2rem;">Pertanyaan yang Sering Ditanyakan (FAQ)</h2>
 
   <div class="faq-box">
     <div class="faq-question">📌 Apakah saya harus daftar dulu?</div>
-    <div class="faq-answer">Tidak perlu. Kamu cukup langsung kirim tugas lewat formulir dan bayar sesuai instruksi, tanpa login atau registrasi.</div>
+    <div class="faq-answer">Tidak. Langsung isi form dan kirim via WhatsApp. Gampang!</div>
   </div>
 
   <div class="faq-box">
     <div class="faq-question">⏱️ Berapa lama waktu pengerjaannya?</div>
-    <div class="faq-answer">Waktu pengerjaan biasanya sekitar 2–4 jam per tugas, tergantung tingkat kesulitan. Kami usahakan secepat mungkin.</div>
+    <div class="faq-answer">Biasanya 2–4 jam per tugas. Tergantung tingkat kesulitannya.</div>
   </div>
 
   <div class="faq-box">
-    <div class="faq-question">📄 Apakah bisa kirim lebih dari satu file tugas?</div>
-    <div class="faq-answer">Bisa! Formulir kami mendukung upload beberapa file sekaligus agar kamu tidak perlu kirim satu per satu.</div>
-  </div>
-
-  <div class="faq-box">
-    <div class="faq-question">📱 Bagaimana saya menerima hasilnya?</div>
-    <div class="faq-answer">Hasil tugas akan dikirim langsung ke nomor WhatsApp yang kamu masukkan di formulir. Mudah dan praktis!</div>
+    <div class="faq-question">📄 Bisa kirim banyak file sekaligus?</div>
+    <div class="faq-answer">Bisa banget! Kirim file dan bukti via WhatsApp setelah submit form.</div>
   </div>
 
   <div class="faq-box">
     <div class="faq-question">💰 Apakah harganya tetap?</div>
-    <div class="faq-answer">Ya, harga flat Rp10.000 per tugas. Tidak ada biaya tersembunyi atau tambahan.</div>
-  </div>
-
-  <div class="faq-box">
-    <div class="faq-question">🛡️ Apakah data saya aman?</div>
-    <div class="faq-answer">Tentu. Kami tidak menyebarkan atau menyimpan file tugas maupun data WhatsApp di luar proses pengerjaan.</div>
+    <div class="faq-answer">Ya, harga flat Rp10.000/tugas. Tidak ada biaya tambahan.</div>
   </div>
 
   <script>
-    const questions = document.querySelectorAll(".faq-question");
-    questions.forEach(q => {
-      q.addEventListener("click", () => {
-        const answer = q.nextElementSibling;
-        answer.style.display = (answer.style.display === "block") ? "none" : "block";
+    document.querySelectorAll(".faq-question").forEach((el) => {
+      el.addEventListener("click", () => {
+        const next = el.nextElementSibling;
+        next.style.display = next.style.display === "block" ? "none" : "block";
       });
     });
   </script>
 </section>
 
-<footer style="background:#0A1F44; color:white; padding:2rem 1rem; margin-top:3rem;">
+<footer>
   <div style="max-width:1000px; margin:auto; display:flex; flex-wrap:wrap; gap:2rem; justify-content:space-between;">
-
-    <!-- Branding -->
     <div style="flex:1; min-width:240px;">
-      <h3 style="color:#FFD700;">Joki Tugas Sekolah</h3>
+      <h3 style="color:#FFD700;">⚡ JokiTugasCepat</h3>
       <p style="font-size:0.95rem; line-height:1.6;">
-        Layanan bantu pengerjaan tugas pelajar Indonesia dengan proses cepat, aman, dan harga terjangkau. Mulai dari SMP, SMA, hingga SMK.
+        Layanan bantu pengerjaan tugas pelajar Indonesia dari SMP, SMA, hingga SMK. Cepat, aman, terpercaya.
       </p>
     </div>
-
-    <!-- Menu -->
     <div style="flex:1; min-width:200px;">
       <h4>Menu</h4>
       <ul style="list-style:none; padding:0;">
@@ -250,25 +257,19 @@
         <li><a href="formulir.html" style="color:white; text-decoration:none;">Formulir</a></li>
       </ul>
     </div>
-
-    <!-- Kontak -->
     <div style="flex:1; min-width:200px;">
       <h4>Kontak</h4>
       <p style="font-size:0.95rem;">
         📞 WhatsApp: <a href="https://wa.me/6285856618965" style="color:#FFD700;">0858-5661-8965</a><br>
-        📩 Email: <a href="mailto:rickpipor@gmail.com" style="color:#FFD700;">jokitugascepat@gmail.com</a>
+        📩 Email: <a href="mailto:jokitugascepat@gmail.com" style="color:#FFD700;">jokitugascepat@gmail.com</a>
       </p>
     </div>
-
   </div>
-
   <hr style="margin:2rem 0; border-color:rgba(255,255,255,0.2);">
-
   <div style="text-align:center; font-size:0.85rem;">
-    © 2025 Joki Tugas Sekolah. Semua hak dilindungi.
+    © 2025 ⚡ JokiTugasCepat. Semua hak dilindungi.
   </div>
 </footer>
-
 
 </body>
 </html>
