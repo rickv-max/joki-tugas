@@ -52,8 +52,7 @@
       z-index: 999;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-
-header h1 {
+    header h1 {
   margin: 0 auto;
   font-size: 1.8rem;
   color: #fff;
@@ -62,11 +61,7 @@ header h1 {
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid #fff;
-  animation:
-    typing 3s steps(20, end) forwards,
-    blink-caret 0.7s step-end infinite;
-  animation-delay: 0s, 3s; /* caret berkedip hanya saat mengetik */
-  animation-fill-mode: forwards, none;
+  animation: typing 3s steps(20, end) forwards;
   text-shadow:
     0 0 3px rgba(0, 0, 0, 0.3),
     0 0 6px rgba(0, 0, 0, 0.5),
@@ -74,6 +69,10 @@ header h1 {
   letter-spacing: 1px;
 }
 
+.blink-caret {
+  animation: blink-caret 0.7s step-end infinite;
+}
+ 
     .hero {
       background: linear-gradient(to right, #0A1F44, #132A63);
       color: white;
@@ -200,7 +199,7 @@ header h1 {
 <body>
 
 <header>
-    <h1 class="typewriter">JokiTugasCepat⚡️</h1>
+  <h1 id="type-text" class="blink-caret">JokiTugasCepat⚡️</h1>
 </header>
 
 <div class="hero" data-aos="fade-up">
@@ -323,6 +322,16 @@ header h1 {
     offset: 120,
     once: false
   });
+  document.addEventListener('DOMContentLoaded', () => {
+  const textElement = document.getElementById('type-text');
+
+  // Hapus caret setelah animasi selesai
+  setTimeout(() => {
+    textElement.classList.remove('blink-caret');
+    textElement.style.borderRight = 'none';
+  }, 3000); // 3 detik = durasi animasi ketik
+});
+
 </script>
 
 </body>
