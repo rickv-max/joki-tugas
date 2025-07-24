@@ -72,7 +72,13 @@
 .blink-caret {
   animation: blink-caret 0.7s step-end infinite;
 }
- 
+ .typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid white;
+  animation: typewriter 3s steps(20) 1s 1 normal both;
+}
+
     .hero {
       background: linear-gradient(to right, #0A1F44, #132A63);
       color: white;
@@ -199,7 +205,7 @@
 <body>
 
 <header>
-  <h1 id="type-text" class="blink-caret">JokiTugasCepat⚡️</h1>
+  <h1 id="type-text" class="typewriter blink-caret"></h1>
 </header>
 
 <div class="hero" data-aos="fade-up">
@@ -324,12 +330,14 @@
   });
   document.addEventListener('DOMContentLoaded', () => {
   const textElement = document.getElementById('type-text');
+  const fullText = "JokiTugasCepat⚡️";
+  textElement.textContent = fullText;
 
   // Hapus caret setelah animasi selesai
   setTimeout(() => {
     textElement.classList.remove('blink-caret');
     textElement.style.borderRight = 'none';
-  }, 3000); // 3 detik = durasi animasi ketik
+  }, 4000); // 3s animasi + 1s delay
 });
 
 </script>
