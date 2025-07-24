@@ -52,31 +52,35 @@
       z-index: 999;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    header h1 {
+       header h1 {
+  /* Tambahan/ubah agar teks center & animasi ketik */
   margin: 0 auto;
   font-size: 1.8rem;
-  color: #fff;
   text-align: center;
-  width: fit-content;
+  color: #fff;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid #fff;
-  animation: typing 3s steps(20, end) forwards;
-  text-shadow:
-    0 0 3px rgba(0, 0, 0, 0.3),
-    0 0 6px rgba(0, 0, 0, 0.5),
-    0 0 10px rgba(0, 0, 0, 0.7);
-  letter-spacing: 1px;
+  width: fit-content;
+}
+
+/* Typewriter effect */
+@keyframes typewriter {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.typewriter {
+  display: inline-block;
+  border-right: 2px solid white;
+  animation: typewriter 3s steps(20, end) 1s 1 normal both;
 }
 
 .blink-caret {
-  animation: blink-caret 0.7s step-end infinite;
-}
- .typewriter {
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 2px solid white;
-  animation: typewriter 3s steps(20) 1s 1 normal both;
+  animation: blink 0.75s step-end infinite;
 }
 
     .hero {
@@ -191,15 +195,6 @@
       padding:2rem 1rem;
       margin-top:3rem;
     }
-   @keyframes typing {
-  from { width: 0 }
-  to { width: 20ch }
-}
-
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: white }
-}
   </style>
 </head>
 <body>
