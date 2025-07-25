@@ -29,25 +29,22 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <style>
     :root {
-      --biru: #0A1F44;
-      --emas: #FFD700;
-      --warna-teal: #01909E;
-      --warna-putihabu: #DAE1E7;
-    }
+  --biru-navy: #152951;
+  --biru-muda: #284A6E;
+  --teal-cerah: #01B4C2;
+  --putih-abu: #DAE1E7;
+  --emas: #FFD700;
+}
 
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e6ecf8, #ffffff);
+  color: var(--biru-navy);
+}
 
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #e6ecf8, #ffffff);
-      color: var(--biru);
-    }
-
-    header {
-  background: var(--biru);
+header {
+  background: var(--biru-navy);
   padding: 1.2rem 1rem;
   position: sticky;
   top: 0;
@@ -70,7 +67,7 @@
 /* Efek ketik */
 @keyframes typewriter {
   from { width: 0 }
-  to { width: 18ch } /* jumlah karakter + emoji disesuaikan */
+  to { width: 18ch }
 }
 
 /* Efek blinking */
@@ -78,118 +75,90 @@
   50% { border-color: transparent; }
 }
 
-    .hero {
-      background: linear-gradient(to right, #0A1F44, #132A63);
-      color: white;
-      padding: 3rem 1rem;
-      text-align: center;
-    }
+.hero {
+  background: linear-gradient(to right, var(--biru-navy), var(--biru-muda));
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
 
-    .hero h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
+.hero p strong {
+  color: white;
+}
 
-    .hero p {
-      max-width: 600px;
-      margin: auto;
-      font-size: 1.1rem;
-      line-height: 1.8;
-      opacity: 0.95;
-    }
+.hero p span {
+  background: var(--emas);
+  color: white;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
 
-    .hero p strong {
-      color: var(--warna-putihabu);
-    }
+.cta-btn {
+  margin-top: 2rem;
+  background: var(--teal-cerah);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-    .cta-btn {
-      margin-top: 2rem;
-      background: var(--warna-teal);
-      color: var(--biru);
-      border: none;
-      padding: 1rem 2.5rem;
-      font-weight: bold;
-      font-size: 1rem;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
+.cta-btn:hover {
+  background-color: var(--biru-muda);
+  transform: scale(1.05);
+}
 
-    .cta-btn:hover {
-      background-color: var(--warna-teal);
-      transform: scale(1.05);
-    }
+.highlight-box {
+  max-width: 800px;
+  margin: 3rem auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 16px rgba(0,0,0,0.08);
+  text-align: center;
+}
 
-    .highlight-box {
-      max-width: 800px;
-      margin: 3rem auto;
-      background-color: #fff;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 0 16px rgba(0,0,0,0.08);
-      text-align: center;
-    }
+.highlight-box p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
 
-    .highlight-box h2 {
-      font-size: 1.6rem;
-      margin-bottom: 1rem;
-    }
+.faq-box {
+  background: var(--biru-navy);
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
 
-    .highlight-box p {
-      font-size: 1rem;
-      line-height: 1.7;
-      color: #333;
-    }
+.faq-question {
+  background-color: var(--emas);
+  color: var(--biru-navy);
+  padding: 1rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.4rem;
-      }
+.faq-answer {
+  padding: 1rem 1.2rem;
+  display: none;
+  font-size: 0.95rem;
+  color: white;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
 
-      .hero h2 {
-        font-size: 1.6rem;
-      }
-
-      .cta-btn {
-        padding: 0.8rem 2rem;
-        font-size: 0.95rem;
-      }
-
-      .highlight-box {
-        margin: 2rem 1rem;
-      }
-    }
-
-    .faq-box {
-      background: #f9f9f9;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      overflow: hidden;
-    }
-
-    .faq-question {
-      background-color: #FFD700;
-      color: #0A1F44;
-      padding: 1rem 1.2rem;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .faq-answer {
-      padding: 1rem 1.2rem;
-      display: none;
-      font-size: 0.95rem;
-      color: #333;
-      border-top: 1px solid #eaeaea;
-    }
-
-    footer {
-      background:#0A1F44;
-      color:white;
-      padding:2rem 1rem;
-      margin-top:3rem;
-    }
+footer {
+  background: var(--biru-navy);
+  color: white;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
   </style>
 </head>
 <body>
