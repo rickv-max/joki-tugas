@@ -25,142 +25,139 @@
 
   gtag('config', 'G-S2R50Z7HX6');
 <style>
-  :root {
-    /* Variabel warna lama diganti dengan palet baru */
-    --biru-gelap: #0A224A;   /* Menggantikan --biru-navy */
-    --teal-tua: #1E648A;     /* Menggantikan --biru-muda */
-    --teal-muda: #47A5C5;    /* Menggantikan --teal-cerah */
-    --putih-pucat: #E9EFF2;  /* Menggantikan --putih-abu */
-  }
+    :root {
+  --biru-navy: #152951;
+  --biru-muda: #284A6E;
+  --teal-cerah: #01B4C2;
+  --putih-abu: #DAE1E7;
+  --emas: #FFD700;
+}
 
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    /* Gradasi dipertahankan, hanya warnanya yang diubah agar serasi */
-    background: linear-gradient(135deg, var(--putih-pucat), #ffffff); 
-    color: var(--biru-gelap);
-  }
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e6ecf8, #ffffff);
+  color: var(--biru-navy);
+}
 
-  header {
-    background: var(--biru-gelap);
-    padding: 1.2rem 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
-  }
+header {
+  background: var(--biru-navy);
+  padding: 1.2rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
 
-  #type-text {
-    margin: 0 auto;
-    font-size: 1.4rem;
-    color: var(--putih-pucat); /* Mengganti 'white' agar konsisten */
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid var(--putih-pucat); /* Mengganti 'white' agar konsisten */
-    display: inline-block;
-    animation: typewriter 2.8s steps(22) 0.3s 1 normal both, blink 0.75s step-end infinite;
-  }
+#type-text {
+  margin: 0 auto;
+  font-size: 1.4rem;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid white;
+  display: inline-block;
+  animation: typewriter 2.8s steps(22) 0.3s 1 normal both, blink 0.75s step-end infinite;
+}
 
-  /* Efek ketik (Tidak ada perubahan) */
-  @keyframes typewriter {
-    from { width: 0 }
-    to { width: 18ch }
-  }
+/* Efek ketik */
+@keyframes typewriter {
+  from { width: 0 }
+  to { width: 18ch }
+}
 
-  /* Efek blinking (Tidak ada perubahan) */
-  @keyframes blink {
-    50% { border-color: transparent; }
-  }
+/* Efek blinking */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
 
-  .hero {
-    /* Variabel gradasi diganti dengan yang baru */
-    background: linear-gradient(to right, var(--biru-gelap), var(--teal-tua));
-    color: var(--putih-pucat); /* Mengganti 'white' agar konsisten */
-    padding: 3rem 1rem;
-    text-align: center;
-  }
+.hero {
+  background: linear-gradient(to right, var(--biru-navy), var(--biru-muda));
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+}
 
-  .hero p strong {
-    color: var(--putih-pucat);
-  }
+.hero p strong {
+  color: white;
+}
 
-  .hero p span {
-    background: none;
-    color: var(--putih-pucat);
-    padding: 0.1rem 0.3rem;
-    border-radius: 4px;
-    font-weight: bold;
-  }
+.hero p span {
+  background: none;
+  color: white;
+  padding: 0.1rem 0.3rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
 
-  .cta-btn {
-    margin-top: 2rem;
-    background: var(--teal-muda);
-    color: var(--putih-pucat); /* Kembali ke warna terang untuk kontras terbaik */
-    border: none;
-    padding: 1rem 2.5rem;
-    font-weight: bold;
-    font-size: 1rem;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
+.cta-btn {
+  margin-top: 2rem;
+  background: var(--teal-cerah);
+  color: white;
+  border: none;
+  padding: 1rem 2.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-  .cta-btn:hover {
-    background-color: var(--teal-tua);
-    transform: scale(1.05);
-  }
+.cta-btn:hover {
+  background-color: var(--biru-muda);
+  transform: scale(1.05);
+}
 
-  .highlight-box {
-    max-width: 800px;
-    margin: 3rem auto;
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 0 16px rgba(0,0,0,0.08);
-    text-align: center;
-  }
+.highlight-box {
+  max-width: 800px;
+  margin: 3rem auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 16px rgba(0,0,0,0.08);
+  text-align: center;
+}
 
-  .highlight-box p {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #333; /* Warna asli dipertahankan untuk keterbacaan, bisa diubah ke var(--biru-gelap) jika diinginkan */
-  }
+.highlight-box p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
 
-  .faq-box {
-    background: var(--biru-gelap);
-    color: var(--putih-pucat);
-    border-radius: 8px;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    overflow: hidden;
-  }
+.faq-box {
+  background: var(--biru-navy);
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
 
-  .faq-question {
-    /* Warna --emas diganti dengan warna dari palet baru */
-    background-color: var(--teal-muda); 
-    color: var(--biru-gelap);
-    padding: 1rem 1.2rem;
-    font-weight: 600;
-    cursor: pointer;
-  }
+.faq-question {
+  background-color: var(--emas);
+  color: var(--biru-navy);
+  padding: 1rem 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+}
 
-  .faq-answer {
-    padding: 1rem 1.2rem;
-    display: none;
-    font-size: 0.95rem;
-    color: var(--putih-pucat);
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    background-color: var(--biru-gelap);
-  }
+.faq-answer {
+  padding: 1rem 1.2rem;
+  display: none;
+  font-size: 0.95rem;
+  color: white;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: var(--biru-navy);
+}
 
-  footer {
-    background: var(--biru-gelap);
-    color: var(--putih-pucat);
-    padding: 2rem 1rem;
-    margin-top: 3rem;
-  }
-</style>
+footer {
+  background: var(--biru-navy);
+  color: white;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+  </style>
 </head>
 <body>
 
