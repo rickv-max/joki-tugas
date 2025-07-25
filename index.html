@@ -24,143 +24,143 @@
   gtag('js', new Date());
 
   gtag('config', 'G-S2R50Z7HX6');
-</script>
-  <!-- Tambahan AOS CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <style>
-    :root {
-  --biru-navy: #152951;
-  --biru-muda: #284A6E;
-  --teal-cerah: #01B4C2;
-  --putih-abu: #DAE1E7;
-  --emas: #FFD700;
-}
+<style>
+  :root {
+    /* Palet Warna Baru dari Gambar */
+    --biru-gelap: #0A224A;
+    --teal-tua: #1E648A;
+    --teal-muda: #47A5C5;
+    --putih-pucat: #E9EFF2;
+  }
 
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #e6ecf8, #ffffff);
-  color: var(--biru-navy);
-}
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--putih-pucat); /* Menggunakan warna putih dari palet baru */
+    color: var(--biru-gelap); /* Menggunakan warna biru paling gelap untuk teks utama */
+  }
 
-header {
-  background: var(--biru-navy);
-  padding: 1.2rem 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  text-align: center;
-}
+  header {
+    background: var(--biru-gelap); /* Latar belakang header menjadi biru paling gelap */
+    padding: 1.2rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+  }
 
-#type-text {
-  margin: 0 auto;
-  font-size: 1.4rem;
-  color: white;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid white;
-  display: inline-block;
-  animation: typewriter 2.8s steps(22) 0.3s 1 normal both, blink 0.75s step-end infinite;
-}
+  #type-text {
+    margin: 0 auto;
+    font-size: 1.4rem;
+    color: var(--putih-pucat); /* Warna teks disesuaikan dengan latar belakang gelap */
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid var(--putih-pucat); /* Warna kursor ketik disesuaikan */
+    display: inline-block;
+    animation: typewriter 2.8s steps(22) 0.3s 1 normal both, blink 0.75s step-end infinite;
+  }
 
-/* Efek ketik */
-@keyframes typewriter {
-  from { width: 0 }
-  to { width: 18ch }
-}
+  /* Efek ketik */
+  @keyframes typewriter {
+    from { width: 0 }
+    to { width: 18ch }
+  }
 
-/* Efek blinking */
-@keyframes blink {
-  50% { border-color: transparent; }
-}
+  /* Efek blinking */
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
 
-.hero {
-  background: linear-gradient(to right, var(--biru-navy), var(--biru-muda));
-  color: white;
-  padding: 3rem 1rem;
-  text-align: center;
-}
+  .hero {
+    /* Gradasi baru menggunakan dua warna dari palet */
+    background: linear-gradient(to right, var(--biru-gelap), var(--teal-tua));
+    color: var(--putih-pucat);
+    padding: 3rem 1rem;
+    text-align: center;
+  }
 
-.hero p strong {
-  color: white;
-}
+  .hero p strong {
+    color: var(--putih-pucat);
+  }
 
-.hero p span {
-  background: none;
-  color: white;
-  padding: 0.1rem 0.3rem;
-  border-radius: 4px;
-  font-weight: bold;
-}
+  .hero p span {
+    background: none;
+    color: var(--putih-pucat);
+    padding: 0.1rem 0.3rem;
+    border-radius: 4px;
+    font-weight: bold;
+  }
 
-.cta-btn {
-  margin-top: 2rem;
-  background: var(--teal-cerah);
-  color: white;
-  border: none;
-  padding: 1rem 2.5rem;
-  font-weight: bold;
-  font-size: 1rem;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
+  .cta-btn {
+    margin-top: 2rem;
+    background: var(--teal-muda); /* Tombol utama menggunakan warna teal muda */
+    color: var(--biru-gelap); /* Warna teks tombol diubah untuk kontras yang lebih baik */
+    border: none;
+    padding: 1rem 2.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
 
-.cta-btn:hover {
-  background-color: var(--biru-muda);
-  transform: scale(1.05);
-}
+  .cta-btn:hover {
+    background-color: var(--teal-tua); /* Efek hover menjadi lebih gelap */
+    color: var(--putih-pucat);
+    transform: scale(1.05);
+  }
 
-.highlight-box {
-  max-width: 800px;
-  margin: 3rem auto;
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 0 16px rgba(0,0,0,0.08);
-  text-align: center;
-}
+  .highlight-box {
+    max-width: 800px;
+    margin: 3rem auto;
+    background-color: #fff; /* Tetap putih agar menonjol, atau bisa diganti var(--putih-pucat) */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 16px rgba(0,0,0,0.08);
+    text-align: center;
+  }
 
-.highlight-box p {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #333;
-}
+  .highlight-box p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--biru-gelap);
+  }
 
-.faq-box {
-  background: var(--biru-navy);
-  color: white;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  overflow: hidden;
-}
+  .faq-box {
+    background: var(--biru-gelap); /* Latar belakang FAQ box menjadi biru paling gelap */
+    color: var(--putih-pucat);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    overflow: hidden;
+  }
 
-.faq-question {
-  background-color: var(--emas);
-  color: var(--biru-navy);
-  padding: 1rem 1.2rem;
-  font-weight: 600;
-  cursor: pointer;
-}
+  .faq-question {
+    /* Warna emas diganti dengan teal muda agar sesuai palet */
+    background-color: var(--teal-muda);
+    color: var(--biru-gelap);
+    padding: 1rem 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
 
-.faq-answer {
-  padding: 1rem 1.2rem;
-  display: none;
-  font-size: 0.95rem;
-  color: white;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  background-color: var(--biru-navy);
-}
+  .faq-answer {
+    padding: 1rem 1.2rem;
+    display: none;
+    font-size: 0.95rem;
+    color: var(--putih-pucat);
+    border-top: 1px solid rgba(233, 239, 242, 0.2); /* Garis pemisah disesuaikan */
+    background-color: var(--biru-gelap);
+  }
 
-footer {
-  background: var(--biru-navy);
-  color: white;
-  padding: 2rem 1rem;
-  margin-top: 3rem;
-}
-  </style>
+  footer {
+    background: var(--biru-gelap); /* Footer menggunakan warna biru paling gelap */
+    color: var(--putih-pucat);
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+  }
+</style>
 </head>
 <body>
 
