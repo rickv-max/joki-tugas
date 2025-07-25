@@ -81,23 +81,34 @@
   }
 
   .cta-btn {
-    margin-top: 2rem;
-    background: var(--teal-muda);
-    color: var(--biru-gelap);
-    border: none;
-    padding: 1rem 2.5rem;
-    font-weight: bold;
-    font-size: 1rem;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
+  margin-top: 2rem;
+  background: var(--teal-muda);
+  color: var(--biru-gelap);
+  border: none;
+  padding: 1rem 2.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: pulse 2.5s infinite;
+}
 
-  .cta-btn:hover {
-    background-color: var(--teal-tua);
-    color: var(--putih-pucat);
-    transform: scale(1.05);
-  }
+/* Hover effect */
+.cta-btn:hover {
+  background-color: var(--teal-tua);
+  color: var(--putih-pucat);
+  transform: scale(1.07);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Animasi pulse */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
 
   .highlight-box {
     max-width: 800px;
@@ -259,7 +270,8 @@
       Rp10.000 per tugas
     </span>.
   </p>
-  <a href="pembayaran.html"><button class="cta-btn">Joki Sekarang</button></a>
+  <a href="pembayaran.html">
+    <button class="cta-btn">Joki Sekarang🚀</button></a>
 </div>
 
 <div class="highlight-box" data-aos="fade-up">
